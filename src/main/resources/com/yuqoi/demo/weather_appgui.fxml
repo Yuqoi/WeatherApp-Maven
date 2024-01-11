@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" stylesheets="@styles/rootstyle.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yuqoi.demo.WeatherAppController">
+   <children>
+      <Pane id="headerBar" prefHeight="89.0" prefWidth="400.0">
+         <children>
+            <Pane id="operationsPane" prefHeight="23.0" prefWidth="400.0">
+               <children>
+                  <Button id="exitBtn" fx:id="exitBtn" layoutX="363.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="37.0" text="X" />
+               </children>
+            </Pane>
+            <HBox alignment="CENTER" layoutY="23.0" prefHeight="66.0" prefWidth="400.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="88.0" prefWidth="254.0">
+                     <children>
+                        <TextField id="findtxt" fx:id="cityNameField" prefHeight="22.0" prefWidth="235.0" promptText="Type a city in english" />
+                     </children></HBox>
+                  <HBox id="rightHeaderBar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                     <children>
+                        <Button id="findBtn" fx:id="findCityBtn" mnemonicParsing="false" onAction="#findCity">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <ImageView fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logo.png" />
+                           </image></ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutY="70.0" prefHeight="430.0" prefWidth="400.0">
+         <ImageView fx:id="weatherIcon" fitHeight="232.0" fitWidth="254.0" layoutX="73.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+         <Label fx:id="tempText" layoutY="270.0" prefHeight="18.0" prefWidth="200.0" text="Temperature :" />
+         <Label fx:id="precText" layoutY="311.0" prefHeight="18.0" prefWidth="200.0" text="Precipitation :" />
+         <Label id="country" fx:id="cityName" layoutX="6.0" layoutY="374.0" prefHeight="23.0" prefWidth="380.0" text="Label" />
+         <Label fx:id="precValue" layoutX="200.0" layoutY="311.0" prefHeight="18.0" prefWidth="200.0" />
+         <Label fx:id="tempValue" layoutX="200.0" layoutY="270.0" prefHeight="18.0" prefWidth="200.0" />
+      </Pane>
+   </children>
+</AnchorPane>
